@@ -1,6 +1,14 @@
 # Multimodal AI Evaluations: Everything You Need to Know
 
-> A practitioner's FAQ. Sharp opinions, not universal truths. Use your judgment.
+ << Sharp opinions, not universal truths. Use your judgment. >>
+> ## What this FAQ is
+
+A practical FAQ for teams building, evaluating, and operating multimodal AI products.
+
+## What this FAQ is not
+
+It is not a benchmark survey, model leaderboard, academic literature review, or legal/compliance manual.
+
 > ## Start Here
 
 If you are new to multimodal evals, read Q1–Q14 first.
@@ -137,7 +145,11 @@ If your team's evaluation ends with a thumbs-up after watching the output once, 
 
 Evaluation is the closed loop that connects observed behavior to a ship/hold/rollback decision. Anything that does not feed a decision is decoration.
 
-Concretely, production evaluation has four parts. **One** — a sampled stream of real production traces flowing into a review queue. **Two** — automated evaluators (code assertions, model-graded judges) plus human spot checks scoring each trace against the Five Quality Contracts. **Three** — dashboards aggregating scores by cohort, feature, and time, with confidence intervals, so drift is visible. **Four** — a governance cadence where a designated owner reviews dashboards, looks at sampled traces, and decides whether to ship, hold, roll back, or ramp.
+Concretely, production evaluation has four parts. 
+**One** — a sampled stream of real production traces flowing into a review queue. 
+**Two** — automated evaluators (code assertions, model-graded judges) plus human spot checks scoring each trace against the Five Quality Contracts. 
+**Three** — dashboards aggregating scores by cohort, feature, and time, with confidence intervals, so drift is visible. \
+**Four** — a governance cadence where a designated owner reviews dashboards, looks at sampled traces, and decides whether to ship, hold, roll back, or ramp.
 
 What evaluation is not: a one-time pre-launch benchmark, a vendor leaderboard score, a generic helpfulness rating, or a vibe check by founders. The test is whether the system would catch a silent overnight regression. If the answer is no, you do not have an evaluation system.
 
@@ -243,7 +255,10 @@ In closed-world products like NotebookLM, Faithfulness dominates. In open-world 
 
 Cross-Modal Consistency is the contract that, when an output spans multiple modalities, the modalities agree with each other in content, timing, and emphasis. It does not exist in text-only evals because text-only outputs have only one modality to check against itself.
 
-The contract has three sub-components. **Content alignment** — what the audio says matches what the visual shows. **Temporal alignment** — when something is referenced in one modality, it appears in the other within the right tolerance window. The narrator says "as you can see here," and the thing they can see is on screen, not three seconds late. **Emphasis alignment** — what is highlighted in one modality is what is being emphasized in the other.
+The contract has three sub-components. 
+**Content alignment** — what the audio says matches what the visual shows. 
+**Temporal alignment** — when something is referenced in one modality, it appears in the other within the right tolerance window. The narrator says "as you can see here," and the thing they can see is on screen, not three seconds late. 
+**Emphasis alignment** — what is highlighted in one modality is what is being emphasized in the other.
 
 This contract is invisible if you evaluate modalities separately. An audio judge listening only to the audio will pass narration that says "the curve peaks in 2023" because the audio is correct in isolation. A visual judge looking only at the chart will pass it because the chart is correct in isolation. Only a cross-modal judge — looking at both, with timecodes — can catch that the chart shown at the moment of "the curve peaks in 2023" is a different chart with no peak in 2023.
 
@@ -373,7 +388,12 @@ The current best practice is hybrid: an automated cross-modal judge that flags c
 
 The quiet failure signature is a state where every dashboard metric is at or above target, the regression suite passes, the LLM-as-judge scores are stable, and yet user satisfaction or retention indicates the product is failing. It is the most dangerous diagnostic state because the team has no instrumented signal to act on.
 
-Common causes. **Eval-set staleness** — the dataset reflects an input distribution that has shifted. **Judge over-fitting** — the LLM-as-judge has been tuned to pass the model's typical outputs and now lacks discrimination. **Contract gap** — the failure mode is in a contract you are not measuring, classically Cross-Modal Consistency with no cross-modal evaluator. **Personalization drift** — aggregate metrics on a fixed set are stable, but the personalized experience has degraded for cohorts the eval set does not capture. **Surface polish without substance** — Output Quality is high, Faithfulness is low, but the dashboard composite weights polish more heavily.
+Common causes. 
+**Eval-set staleness** — the dataset reflects an input distribution that has shifted. 
+**Judge over-fitting** — the LLM-as-judge has been tuned to pass the model's typical outputs and now lacks discrimination. 
+**Contract gap** — the failure mode is in a contract you are not measuring, classically Cross-Modal Consistency with no cross-modal evaluator. 
+**Personalization drift** — aggregate metrics on a fixed set are stable, but the personalized experience has degraded for cohorts the eval set does not capture. 
+**Surface polish without substance** — Output Quality is high, Faithfulness is low, but the dashboard composite weights polish more heavily.
 
 The remedy is to treat the quiet failure signature as a diagnostic question, not a metrics question. When users are unhappy and metrics are green, do not look harder at the metrics. Sample a hundred recent traces from users who churned, complained, or rated negatively, and read them. The reading reveals which contract is failing, and the contract reveals which evaluator is missing. Only then return to the dashboard.
 
@@ -491,7 +511,13 @@ The discipline is to test the judge on a labeled set of known failure modes befo
 
 Cohen's kappa is the chance-corrected agreement metric between two raters, ranging from −1 to 1, with 0 meaning agreement at chance level. For evaluation calibration, treat it as the answer to "is my LLM-as-judge agreeing with my humans for the right reasons, or just by accident?"
 
-Six steps. **One** — hand-label fifty to one hundred traces with binary pass/fail on a single contract. One human, the benevolent dictator, no committee. **Two** — run the LLM-as-judge on the same traces. **Three** — build a 2x2 confusion matrix. **Four** — compute kappa using the standard formula. Most labs have a one-line library function. **Five** — read the kappa. Below 0.4, the judge is uncorrelated with the human and must be redesigned. 0.4–0.6, partially aligned, needs prompt or model iteration. 0.6–0.75, usable for triage but every disagreement should be human-reviewed. Above 0.75, reliable with periodic spot checks. **Six** — recompute kappa monthly on fresh traces. A judge that was 0.8 in March can be 0.5 by September with no one noticing.
+Six steps. 
+**One** — hand-label fifty to one hundred traces with binary pass/fail on a single contract. One human, the benevolent dictator, no committee. 
+**Two** — run the LLM-as-judge on the same traces. 
+**Three** — build a 2x2 confusion matrix. 
+**Four** — compute kappa using the standard formula. Most labs have a one-line library function. 
+**Five** — read the kappa. Below 0.4, the judge is uncorrelated with the human and must be redesigned. 0.4–0.6, partially aligned, needs prompt or model iteration. 0.6–0.75, usable for triage but every disagreement should be human-reviewed. Above 0.75, reliable with periodic spot checks. 
+**Six** — recompute kappa monthly on fresh traces. A judge that was 0.8 in March can be 0.5 by September with no one noticing.
 
 Two cautions. Kappa on a single contract is the right unit; kappa on a multi-contract composite is misleading. Kappa with class imbalance — most traces pass — can look high while the judge is bad at detecting failures, which is the case you actually care about. For class-imbalanced scenarios, supplement with True Positive Rate and True Negative Rate explicitly.
 
