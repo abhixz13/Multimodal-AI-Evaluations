@@ -1,6 +1,15 @@
 # Multimodal AI Evaluations: Everything You Need to Know
 
 > A practitioner's FAQ. Sharp opinions, not universal truths. Use your judgment.
+> ## Start Here
+
+If you are new to multimodal evals, read Q1–Q14 first.
+
+If you are building an eval system this week, read Q6, Q22, Q24, Q25, Q32, Q35, Q50.
+
+If your product is already in production, read Q21, Q42, Q50–Q56.
+
+If you work in a regulated domain, read Q44–Q48.
 
 ---
 
