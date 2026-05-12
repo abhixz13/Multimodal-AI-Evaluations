@@ -26,6 +26,7 @@ This framework teaches you to find failures where they originate, not where they
 | [`/templates`](./templates) | 18 production-ready evaluation templates (T-01 through T-18) |
 | [`/reports`](./reports) | Evaluation reports applying this framework to real multimodal AI products |
 | [`/implementations`](./implementations) | Platform-specific implementations using Braintrust, Arize, Comet Opik, LangSmith |
+| [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) | Design specification, data model, and visual artifacts for the evaluation platform UI — 18 screens, design system, and frontend build guide |
 
 ---
 
@@ -178,7 +179,30 @@ Working implementations of this framework's evaluators on major evaluation platf
 | LangSmith | LangChain-native, audio playback in traces | Coming Soon |
 
 ---
+## Dashboards & Reports Design System
 
+A complete design specification and visual artifact set for a practitioner-grade evaluation platform that operationalizes this framework as an interactive environment rather than a static document.
+
+The design is grounded in the Huxe v3 evaluation report — every screen maps to a specific finding, failure pattern, or methodological commitment from a real evaluation.
+
+| What | Detail |
+| --- | --- |
+| Screens | 18 screens across Evaluation, Analysis, Products, and Governance sections |
+| Design system | Unified token set — contract colors, evidence badge system, pipeline stage colors, card elevation variants |
+| Data model | Full TypeScript entity definitions for all platform entities |
+| Novel patterns | Evidence provenance badges on every score · Causal chain tracker with blast radius narrative · Audio-native evaluation track · Safety Override Strip as structural section |
+| Frontend approach | Custom frontend over open-source eval backend (Arize Phoenix or Comet Opik) — replace the UI layer, retain the infrastructure |
+
+**The five design principles:**
+- **Upstream first** — failures originate upstream and appear downstream; the UI surfaces origin, not symptoms
+- **Evidence is not optional** — every score carries a [SIM] / [EST] / [REV] / [INF] / [LIVE] provenance badge
+- **Safety is architecturally above everything** — the Safety Override Strip precedes all contract cards and cannot be dismissed
+- **Data density is a feature** — tables are the correct UI for practitioner tools
+- **The report is the product** — every screen is a data entry point; the evaluation report assembles from live platform data at export time
+
+→ [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) for the full specification, data model, and screen artifacts.
+
+---
 ## Evaluation Maturity Model
 
 Where is your team today?
@@ -207,6 +231,8 @@ Where is your team today?
 | Making a ship/hold decision | [`T-14 Decision Memo`](./templates/T-14-decision-memo.md) |
 | Running a quarterly program review | [`T-18 Evaluation Debt Register`](./templates/T-18-evaluation-debt-register.md) |
 | Evaluating a specific platform | [`/implementations`](./implementations) directory |
+| Viewing the evaluation platform UI design | [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) — 18 screen designs with design system |
+| Building an evaluation frontend | [`/dashboards/datamodels.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards/datamodels.md) — TypeScript data model and frontend build guide |
 | Reading evaluation reports | [`/reports`](./reports) directory |
 
 ---
@@ -226,6 +252,10 @@ Where is your team today?
 **Judge Drift** — When the AI model powering your evaluators is silently updated by its provider. Evaluators become more lenient; metrics look like they're improving when they're not. Caught by monthly kappa recalibration on 20 fresh labeled examples.
 
 **Consumption Drift** — Same technical output quality, declining user engagement. A cluster of listeners dropping off at the same audio timestamp is a precision failure detector that no LLM judge can replicate.
+
+**Evidence Provenance** — Every score in the evaluation platform carries a badge classifying how it was derived: [SIM] simulated · [EST] estimated from public data · [REV] supported by public evidence · [INF] architectural inference · [LIVE] live measured. Simulated and live-measured data must never look the same.
+
+**Blast Radius Explanation** — A required narrative on every causal chain record explaining why fixing the upstream root resolves multiple downstream failures simultaneously, and why this makes the upstream fix rank higher in the priority formula than a faster leaf-node fix. Without this explanation, blast radius is a number nobody acts on.
 
 ---
 
