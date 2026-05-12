@@ -130,8 +130,11 @@ Ten-trace open-coding workspace for the first step of the Analyze phase — capt
 
 ### Screen 8 — Taxonomy Builder
 Product-specific failure tag namespace manager organized by pipeline junction, showing blast radius, causal chain linkage, and case counts per tag — the source of truth for all trace tagging, failure mode library entries, and causal chain definitions.
+<img width="1449" height="1651" alt="image" src="https://github.com/user-attachments/assets/668c16f6-8cbb-4576-bee8-62cd91be0140" />
 
-![Taxonomy Builder](./images/screen-08-taxonomy-builder.png)
+<img width="1432" height="1628" alt="image" src="https://github.com/user-attachments/assets/3dbea832-28c3-43fc-a22d-00c55922583f" />
+
+<!-- ![Taxonomy Builder](./images/screen-08-taxonomy-builder.png) -->
 
 [📄 View PDF](./pdf/screen-08-taxonomy-builder.pdf)
 
@@ -140,7 +143,8 @@ Product-specific failure tag namespace manager organized by pipeline junction, s
 ### Screen 9 — Driver Analysis Workspace (T-13)
 Structured five-step root-cause analysis tool (Observe → Hypothesize → Fix Surfaces → Recommend → Summarize) that auto-populates from run data, calculates priority formula scores for proposed fixes, enforces evidence badge requirements before recommendations are finalized, and generates a T-14 Decision Memo as its exit action.
 
-![Driver Analysis Workspace](./images/screen-09-driver-analysis.png)
+
+<!-- ![Driver Analysis Workspace](./images/screen-09-driver-analysis.png) -->
 
 [📄 View PDF](./pdf/screen-09-driver-analysis.pdf)
 
