@@ -7,11 +7,11 @@
 
 This directory contains the complete design specification and visual artifacts for a practitioner-grade evaluation platform that operationalizes the Multimodal AI Product Evaluation framework as a living, interactive environment rather than a static document.
 
-The platform covers the full evaluation lifecycle — from initial surface mapping and failure taxonomy through contract scoring, causal chain analysis, backlog prioritization, and published evaluation reports — for any multimodal AI product: document-to-audio systems, text-to-video generators, generative image tools, async video summarizers, and multimodal agents.
+The platform covers the full evaluation lifecycle — from initial surface mapping and failure taxonomy through contract scoring, causal chain analysis, backlog prioritization, and published evaluation reports — for any multimodal AI product: document-to-audio systems, text-to-video generators, generative image tools, async video summarizers, evaluation debt and multimodal agents.
 
 **Design scope:** Desktop-first (1440px), dark mode, practitioner audience. Not a consumer product — data density is intentional.
 
-**Full specification:** [`DESIGN_SPEC.md`](./DESIGN_SPEC.md)
+**Full specification:** [`DESIGN_SPEC`](./DESIGN_SPEC.pdf)
 **Data model:** [`datamodels.md`](./datamodels.md)
 
 ---
@@ -32,7 +32,7 @@ Five principles that govern every layout and component decision.
 
 ## Design System
 
-The platform uses a unified design system defined in full in [`DESIGN_SPEC.md`](./DESIGN_SPEC.md).
+The platform uses a unified design system defined in full in [`DESIGN_SPEC`](./DESIGN_SPEC.pdf).
 
 **Contract color tokens** — five colors permanently associated with the Five Quality Contracts (C1 amber-orange, C2 violet, C3 red, C4 blue, C5 green) plus deep red for C-SAFETY — function as a persistent visual vocabulary across all screens.
 
@@ -48,7 +48,7 @@ The platform uses a unified design system defined in full in [`DESIGN_SPEC.md`](
 
 ## Screens
 
-The platform comprises 17 screens across four sections: Evaluation, Analysis, Products, and Governance.
+The platform comprises 18 screens across four sections: Evaluation, Analysis, Products, and Governance.
 
 ---
 
@@ -132,7 +132,6 @@ Ten-trace open-coding workspace for the first step of the Analyze phase — capt
 Product-specific failure tag namespace manager organized by pipeline junction, showing blast radius, causal chain linkage, and case counts per tag — the source of truth for all trace tagging, failure mode library entries, and causal chain definitions.
 <img width="1449" height="1651" alt="image" src="https://github.com/user-attachments/assets/668c16f6-8cbb-4576-bee8-62cd91be0140" />
 
-<img width="1432" height="1628" alt="image" src="https://github.com/user-attachments/assets/3dbea832-28c3-43fc-a22d-00c55922583f" />
 
 <!-- ![Taxonomy Builder](./images/screen-08-taxonomy-builder.png) -->
 
@@ -142,6 +141,7 @@ Product-specific failure tag namespace manager organized by pipeline junction, s
 
 ### Screen 9 — Driver Analysis Workspace (T-13)
 Structured five-step root-cause analysis tool (Observe → Hypothesize → Fix Surfaces → Recommend → Summarize) that auto-populates from run data, calculates priority formula scores for proposed fixes, enforces evidence badge requirements before recommendations are finalized, and generates a T-14 Decision Memo as its exit action.
+<img width="1378" height="1748" alt="image" src="https://github.com/user-attachments/assets/60b6a5f1-c2b0-4bfb-ba83-5072d3965722" />
 
 
 <!-- ![Driver Analysis Workspace](./images/screen-09-driver-analysis.png) -->
@@ -152,8 +152,10 @@ Structured five-step root-cause analysis tool (Observe → Hypothesize → Fix S
 
 ### Screen 10 — Failure Mode Library
 Queryable library of all named failure patterns for a product, with stage-origin bar chart, blast radius leaderboard, and per-pattern cards showing occurrence counts with evidence badges, fix surface attribution, causal chain links, and backlog rank.
+<img width="1402" height="1748" alt="image" src="https://github.com/user-attachments/assets/09c3da49-b61a-43d9-8c29-a36dce2969fd" />
 
-![Failure Mode Library](./images/screen-10-failure-mode-library.png)
+
+<!-- ![Failure Mode Library](./images/screen-10-failure-mode-library.png) -->
 
 [📄 View PDF](./pdf/screen-10-failure-mode-library.pdf)
 
@@ -161,8 +163,10 @@ Queryable library of all named failure patterns for a product, with stage-origin
 
 ### Screen 11 — Causal Chains
 Named causal chain tracker showing root-to-downstream failure stories, expected lift after fix, and a required Blast Radius Explanation block — the narrative that makes legible why an upstream fix outranks a faster downstream fix in the priority formula.
+<img width="1518" height="1480" alt="image" src="https://github.com/user-attachments/assets/ea802a6a-5a07-4b71-aa04-1d91b4107167" />
 
-![Causal Chains](./images/screen-11-causal-chains.png)
+
+<!-- ![Causal Chains](./images/screen-11-causal-chains.png) -->
 
 [📄 View PDF](./pdf/screen-11-causal-chains.pdf)
 
@@ -170,8 +174,10 @@ Named causal chain tracker showing root-to-downstream failure stories, expected 
 
 ### Screen 12 — Backlog Prioritization (T-17)
 Priority-formula-ranked fix backlog with a structurally separate safety override zone (rendered above all formula items, with no formula score) ensuring zero-tolerance items are never deprioritized against implementation effort.
+<img width="1402" height="1352" alt="image" src="https://github.com/user-attachments/assets/d0c36291-ca16-4a9c-9d40-c7dd654e1419" />
 
-![Backlog Prioritization](./images/screen-12-backlog.png)
+
+<!-- ![Backlog Prioritization](./images/screen-12-backlog.png) -->
 
 [📄 View PDF](./pdf/screen-12-backlog.pdf)
 
@@ -179,8 +185,10 @@ Priority-formula-ranked fix backlog with a structurally separate safety override
 
 ### Screen 13 — Product Evaluation Report
 Fourteen-section evaluation report assembled from live platform data — contract scores, backlog, driver analysis output, decision trigger table, and auto-generated evidence provenance index — rendered as a shareable document with one-click PDF export.
+<img width="1373" height="1575" alt="image" src="https://github.com/user-attachments/assets/054a6e57-ea17-443e-a8e3-e8c1f12bb96a" />
 
-![Product Evaluation Report](./images/screen-13-report.png)
+
+<!-- ![Product Evaluation Report](./images/screen-13-report.png) -->
 
 [📄 View PDF](./pdf/screen-13-report.pdf)
 
@@ -188,8 +196,10 @@ Fourteen-section evaluation report assembled from live platform data — contrac
 
 ### Screen 14 — Maturity Model
 Five-level evaluation maturity tracker (Ad Hoc → Instrumented → Systematic → Closed Loop → Self-Improving) with per-level requirement checklists and an advancement plan to the next level.
+<img width="1397" height="1710" alt="image" src="https://github.com/user-attachments/assets/3d0dc1de-d09a-44eb-a4d9-8c69d2ee1dcd" />
 
-![Maturity Model](./images/screen-14-maturity-model.png)
+
+<!-- ![Maturity Model](./images/screen-14-maturity-model.png) -->
 
 [📄 View PDF](./pdf/screen-14-maturity-model.pdf)
 
@@ -197,8 +207,10 @@ Five-level evaluation maturity tracker (Ad Hoc → Instrumented → Systematic �
 
 ### Screen 15 — Five Drift Monitor
 Governance view tracking all five drift types — Input, Ingestion (with live canary corpus delta), Model, Judge (with evaluator kappa health table), and Consumption (with a 21-day minimum window enforcement that blocks premature conclusions from novelty-period data).
+<img width="1483" height="1676" alt="image" src="https://github.com/user-attachments/assets/61ecbc7f-c339-4571-adf3-ef812551bfcb" />
 
-![Five Drift Monitor](./images/screen-15-drift-monitor.png)
+
+<!-- ![Five Drift Monitor](./images/screen-15-drift-monitor.png) -->
 
 [📄 View PDF](./pdf/screen-15-drift-monitor.pdf)
 
@@ -206,8 +218,10 @@ Governance view tracking all five drift types — Input, Ingestion (with live ca
 
 ### Screen 16 — Lifecycle Coverage Audit (T-11)
 Test suite distribution audit comparing actual case type percentages against framework-required targets for the current lifecycle stage, with media blob registry and coverage gap report generation.
+<img width="1445" height="1503" alt="image" src="https://github.com/user-attachments/assets/6ef0d1f7-1e32-49a2-9b02-6eac81f5878d" />
 
-![Lifecycle Coverage Audit](./images/screen-16-coverage-audit.png)
+
+<!-- ![Lifecycle Coverage Audit](./images/screen-16-coverage-audit.png) -->
 
 [📄 View PDF](./pdf/screen-16-coverage-audit.pdf)
 
@@ -215,10 +229,23 @@ Test suite distribution audit comparing actual case type percentages against fra
 
 ### Screen 17 — New Product Onboarding
 Three-step product setup wizard (Identity → Pipeline Stage Labels → Evaluation Brief) that pre-populates default sub-contracts, judge roles, failure taxonomy, and audio-native eval track settings based on product category selection.
+<img width="1549" height="1504" alt="image" src="https://github.com/user-attachments/assets/a70f3106-4cdd-41fe-9ba7-cdab311bf9be" />
 
-![New Product Onboarding](./images/screen-17-onboarding.png)
+
+<!-- ![New Product Onboarding](./images/screen-17-onboarding.png) -->
 
 [📄 View PDF](./pdf/screen-17-onboarding.pdf)
+
+---
+
+### Screen 18 — Eval Debt Register (T-18)
+Quarterly governance audit surfacing accumulated evaluation debt — unmeasured contracts, expired kappa calibrations, coverage gaps, overdue templates, and aging backlog items — with a completion gate that blocks audit sign-off while Critical items remain unaddressed.
+<img width="1465" height="1626" alt="image" src="https://github.com/user-attachments/assets/a35e448d-15c8-4372-98a9-ef248b89964c" />
+
+
+<!-- ![Eval Debt Register](./images/screen-18-eval-debt-register.png) -->
+
+[📄 View PDF](./pdf/screen-18-eval-debt-register.pdf)
 
 ---
 
@@ -227,7 +254,7 @@ Three-step product setup wizard (Identity → Pipeline Stage Labels → Evaluati
 These design artifacts are intended for direct handoff to a frontend implementation. The recommended approach:
 
 **1. Establish the design token file first.**
-The complete token set (contract colors, evidence badge colors, stage colors, card elevation variants, base palette, typography, spacing) is defined in [`DESIGN_SPEC.md`](./DESIGN_SPEC.md). Implement this as a CSS/Tailwind config or design system foundation before touching any screen.
+The complete token set (contract colors, evidence badge colors, stage colors, card elevation variants, base palette, typography, spacing) is defined in [`DESIGN_SPEC`](./DESIGN_SPEC.pdf). Implement this as a CSS/Tailwind config or design system foundation before touching any screen.
 
 **2. Build the EvidenceBadge component before any screen.**
 The `EvidenceBadge` ([SIM] / [EST] / [REV] / [INF] / [LIVE]) is the most novel primitive in the system. It appears on every numerical score throughout the platform. Implement it with its five color variants, hover tooltip, and error state (missing badge = parent card red border) as a prerequisite to all other work.
@@ -251,16 +278,13 @@ The platform is designed as a custom frontend over an open-source eval backend. 
 ```
 dashboards/
 ├── README.md                  ← this file
-├── DESIGN_SPEC.md             ← full 17-screen design specification
+├── DESIGN_SPEC.pdf            ← full 17-screen design specification
 ├── datamodels.md              ← TypeScript entity definitions
 ├── images/
-│   ├── screen-01-mission-control.png
-│   ├── screen-02-evaluation-brief.png
-│   └── ... (17 screens)
 └── pdf/
     ├── screen-01-mission-control.pdf
     ├── screen-02-evaluation-brief.pdf
-    └── ... (17 screens)
+    └── ... (18 screens)
 ```
 
 ---
