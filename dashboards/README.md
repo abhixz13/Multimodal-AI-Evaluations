@@ -54,8 +54,10 @@ The platform comprises 17 screens across four sections: Evaluation, Analysis, Pr
 
 ### Screen 1 — Mission Control
 10-second status check displaying safety overrides, all five contract health scores with sub-contract granularity, pipeline failure origin distribution, consumption signals, and overall evaluation verdict.
+<img width="708" height="844" alt="screen-01-mission-control" src="https://github.com/user-attachments/assets/4d550fb1-5d4c-435e-8b06-f443bf16cb40" />
 
-![Mission Control](./images/screen-01-mission-control.png)
+
+<!-- ![Mission Control](./images/screen-01-mission-control.png) -->
 
 [📄 View PDF](./pdf/screen-01-mission-control.pdf)
 
@@ -63,8 +65,10 @@ The platform comprises 17 screens across four sections: Evaluation, Analysis, Pr
 
 ### Screen 2 — Evaluation Brief (T-01)
 Gated threshold-setting form that locks all evaluation runs until quality contract thresholds, judge panel, consumption targets, and riskiest assumption are documented before any scores are seen.
+<img width="702" height="838" alt="screen-02-evaluation-brief" src="https://github.com/user-attachments/assets/5890a197-d16f-4cb7-8fcb-ebfb51355ac9" />
 
-![Evaluation Brief](./images/screen-02-evaluation-brief.png)
+
+<!-- ![Evaluation Brief](./images/screen-02-evaluation-brief.png) -->
 
 [📄 View PDF](./pdf/screen-02-evaluation-brief.pdf)
 
@@ -72,8 +76,10 @@ Gated threshold-setting form that locks all evaluation runs until quality contra
 
 ### Screen 3 — Judge Panel
 Multi-rater protocol coordinator tracking blind labeling progress, Cohen's kappa per judge pair, disagreement queue (surfacing specification questions, not labeling noise), and tiebreaker escalation SLA.
+<img width="1526" height="1624" alt="image" src="https://github.com/user-attachments/assets/fd9a4d1b-665b-443f-ba26-4e5a75fa3b2e" />
 
-![Judge Panel](./images/screen-03-judge-panel.png)
+
+<!-- ![Judge Panel](./images/screen-03-judge-panel.png) -->
 
 [📄 View PDF](./pdf/screen-03-judge-panel.pdf)
 
@@ -81,8 +87,10 @@ Multi-rater protocol coordinator tracking blind labeling progress, Cohen's kappa
 
 ### Screen 4 — Five Contracts Dashboard
 Per-contract deep-dive showing disaggregated sub-contract scores with evidence badges, 30-day trend sparklines, canary corpus live delta, evaluator kappa health, and a full failing-cases table.
+<img width="1414" height="1836" alt="image" src="https://github.com/user-attachments/assets/354274c5-6d82-4b46-a971-b2929a1365eb" />
 
-![Five Contracts Dashboard](./images/screen-04-five-contracts.png)
+
+<!-- ![Five Contracts Dashboard](./images/screen-04-five-contracts.png) -->
 
 [📄 View PDF](./pdf/screen-04-five-contracts.pdf)
 
@@ -90,8 +98,10 @@ Per-contract deep-dive showing disaggregated sub-contract scores with evidence b
 
 ### Screen 5 — Pipeline Inspector
 Nine-stage pipeline map with product-specific stage labels, failure percentage and status per stage, upstream alert logic (fires when S1+S2 > 35%), and an expandable stage detail panel showing failure tags, blast radii, and causal chain roots.
+<img width="1447" height="1797" alt="image" src="https://github.com/user-attachments/assets/d64f277e-b178-4bf3-9d5b-e79ff0dd1e41" />
 
-![Pipeline Inspector](./images/screen-05-pipeline-inspector.png)
+
+<!-- ![Pipeline Inspector](./images/screen-05-pipeline-inspector.png) -->
 
 [📄 View PDF](./pdf/screen-05-pipeline-inspector.pdf)
 
@@ -99,8 +109,9 @@ Nine-stage pipeline map with product-specific stage labels, failure percentage a
 
 ### Screen 6 — Trace Explorer
 Individual trace view with stage-labeled span waterfall, contract verdicts with judge quotes and causal chain attribution, and a parallel audio-native evaluation track (waveform player with failure timestamp markers and six-dimension evaluation table) for products with audio output.
+<img width="1396" height="1409" alt="image" src="https://github.com/user-attachments/assets/d329f9ff-c1b7-4b8b-bf1f-32a4d29d28c3" />
 
-![Trace Explorer](./images/screen-06-trace-explorer.png)
+<!-- ![Trace Explorer](./images/screen-06-trace-explorer.png) -->
 
 [📄 View PDF](./pdf/screen-06-trace-explorer.pdf)
 
@@ -108,8 +119,10 @@ Individual trace view with stage-labeled span waterfall, contract verdicts with 
 
 ### Screen 7 — Surface Mapper
 Ten-trace open-coding workspace for the first step of the Analyze phase — capturing free-text failure observations across initial traces and surfacing emerging patterns before the formal taxonomy is built.
+<img width="1471" height="1812" alt="image" src="https://github.com/user-attachments/assets/340f8a5e-3958-413d-9fc4-ae2ea3a32ce1" />
 
-![Surface Mapper](./images/screen-07-surface-mapper.png)
+
+<!-- ![Surface Mapper](./images/screen-07-surface-mapper.png) -->
 
 [📄 View PDF](./pdf/screen-07-surface-mapper.pdf)
 
