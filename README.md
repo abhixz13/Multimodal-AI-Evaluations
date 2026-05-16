@@ -2,7 +2,7 @@
 
 > **A practitioner's framework for testing AI products that see, hear, read, and speak.**
 
-Built from applied evaluation practice on real multimodal AI products. Not theory — a working operational system with 18 production-ready templates, a complete governance layer, and evaluation reports across multiple products.
+Built from applied evaluation practice on real multimodal AI products. Not theory — a working operational system with 22 production-ready templates, a complete governance layer, and evaluation reports across multiple products.
 
 ---
 
@@ -21,12 +21,11 @@ This framework teaches you to find failures where they originate, not where they
 ## What Is In This Repository
 
 | Directory | Contents |
-|---|---|
-| [`/guides`](./guides) | 101 Guide · Getting Started Guide · Practitioner's Field Manual (20 chapters) |
-| [`/templates`](./templates) | 18 production-ready evaluation templates (T-01 through T-18) |
-| [`/reports`](./reports) | Evaluation reports applying this framework to real multimodal AI products |
-| [`/implementations`](./implementations) | Platform-specific implementations using Braintrust, Arize, Comet Opik, LangSmith |
-| [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) | Design specification, data model, and visual artifacts for the evaluation platform UI — 18 screens, design system, and frontend build guide |
+| --- | --- |
+| [`/guides`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides) | 101 Guide · Getting Started Guide · Practitioner's Field Manual (20 chapters) · **Multimodal AI Evals Speak** (new) · DECODE Translation Worksheet |
+| [`/templates`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates) | 22 production-ready evaluation templates (T-01 through T-22) |
+| [`/reports`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/reports) | Evaluation reports applying this framework to real multimodal AI products |
+| [`/implementations`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/implementations) | Platform-specific implementations using Braintrust, Arize, Comet Opik, LangSmith |
 
 ---
 
@@ -34,8 +33,8 @@ This framework teaches you to find failures where they originate, not where they
 
 Multimodal AI products must be evaluated across five separate, independently failing contracts. A single accuracy score hides too much — always evaluate them separately.
 
-|# |Contract |The Core Question |
-|---|---|---|
+| # | Contract | The Core Question |
+| --- | --- | --- |
 | 1 | **Ingestion Fidelity** | Did the pipeline faithfully extract what was in the source? |
 | 2 | **Faithfulness** | Is the output traceable to the sources? |
 | 3 | **Factuality** | Is the output correct about the real world? |
@@ -43,6 +42,8 @@ Multimodal AI products must be evaluated across five separate, independently fai
 | 5 | **Output Quality** | Is the production quality adequate per medium? |
 
 > **Ingestion Fidelity is the most commonly missed contract.** In text-only AI it can be folded into faithfulness. In multimodal AI — where PDFs drop figure captions, ASR hallucinates during silence, and retrievers ignore image-bearing chunks — it earns its own contract, its own evaluator, its own canary monitor, and a 15% floor in every test suite at every lifecycle stage.
+
+> **Safety is a mandatory governance overlay** applied across all five contracts — not a sixth standalone contract. Every evaluation specification must include an adversarial safety test set regardless of which quality contracts are triggered.
 
 ---
 
@@ -64,30 +65,68 @@ Stage 9 — Delivery        ← where most teams only evaluate
 
 ---
 
-## The 18 Templates
+## The DECODE Translation Framework
+
+**The gap between what stakeholders ask for and what evaluators measure is where quality programs fail.**
+
+The DECODE framework is a six-step methodology for translating product requirements — PRDs, feature requests, stakeholder statements — into formal, executable multimodal evaluation specifications. It is the upstream discipline that feeds every template and evaluator in this repository.
+
+```
+D — Decompose requirements into atomic capability claims
+E — Enumerate modalities and input slices
+C — Classify by pipeline stage, quality contract, and failure mode
+O — Operationalize each failure mode as a measurement primitive
+D — Define thresholds, gates, datasets, and monitoring
+E — Express as a formal Eval Specification
+```
+
+**Key artifacts the DECODE framework produces:**
+
+- **Eval Stub** — a 7-section structured commitment that lives inside a PRD, authored by the PM in the same session as the feature requirement. Seeds the full Eval Spec without a separate translation meeting.
+- **Eval Specification** — the full 15-section evaluation contract, authored by the eval engineer from the Eval Stub, governs all launch gate decisions.
+- **PRD Eval Requirements Section** — the governance container embedded in every AI feature PRD that holds the Eval Stub, spec reference, and launch gate commitments.
+
+The complete framework is documented in [`guides/multimodal-ai-evals-speak.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md), with all four companion templates in `/templates`.
+
+---
+
+## The 22 Templates
 
 Every template is production-ready. Copy, adapt to your product, fill in before running any evaluations.
 
+### Evaluation Infrastructure Templates (T-01 – T-18)
+
 | Template | Purpose | When to Use |
-|---|---|---|
-| [T-01 Evaluation Brief](./templates/T-01-evaluation-brief.md) | Team alignment on five contracts before work begins | Start of every feature |
-| [T-02 Quality Statement](./templates/T-02-quality-statement.md) | Technical spec for monitoring and CI systems | After T-01 is signed |
-| [T-03 Architecture Worksheet](./templates/T-03-architecture-worksheet.md) | Cost vs. faithfulness trade-off documentation | Before committing to a stack |
-| [T-04 Logging Schema](./templates/T-04-logging-schema.md) | Complete YAML spec for all four logging layers | Before going to production |
-| [T-05 Ingestion Fidelity Evaluator](./templates/T-05-ingestion-fidelity-evaluator.md) | LLM judge prompt for Contract 1 | After error analysis |
-| [T-06 Faithfulness Evaluator](./templates/T-06-faithfulness-evaluator.md) | LLM judge prompt for Contract 2 | After error analysis |
-| [T-07 Factuality Evaluator](./templates/T-07-factuality-evaluator.md) | LLM judge prompt for Contract 3 | After error analysis |
-| [T-08 Audio Quality Evaluator](./templates/T-08-audio-quality-evaluator.md) | LLM judge prompt for Contract 5 — four independent dimensions | After error analysis |
-| [T-09 Cross-Modal Consistency Evaluator](./templates/T-09-cross-modal-consistency-evaluator.md) | LLM judge prompt for Contract 4 | After error analysis |
-| [T-10 Gate Thresholds and Alert Rules](./templates/T-10-gate-thresholds-alert-rules.md) | Per-metric monitoring configuration with escalation policy | Before production monitoring |
-| [T-11 Regression Suite Coverage Audit](./templates/T-11-regression-suite-coverage-audit.md) | Coverage gap identification per taxonomy tag + media blob registry | Building and maintaining test suite |
-| [T-12 CI Gate Policy](./templates/T-12-ci-gate-policy.md) | Blocking conditions + false positive protocol | Before wiring CI |
-| [T-13 Driver Analysis Template](./templates/T-13-driver-analysis-template.md) | Structured root-cause analysis for any monitoring alert | Every time an alert fires |
-| [T-14 Decision Memo](./templates/T-14-decision-memo.md) | Evidence-backed Ship / Ramp / Hold / Rollback record | Every ship/hold decision |
-| [T-15 Experiment Pre-Registration](./templates/T-15-experiment-pre-registration.md) | Hypothesis, metric, and decision rule before data collection | Before any A/B experiment |
-| [T-16 Dataset Record](./templates/T-16-dataset-record.md) | Versioned dataset metadata with media blob registry | Creating or versioning datasets |
-| [T-17 Backlog Prioritization Table](./templates/T-17-backlog-prioritization-table.md) | Six-dimension priority formula with blast radius scoring | After error analysis |
-| [T-18 Evaluation Debt Register](./templates/T-18-evaluation-debt-register.md) | Quarterly governance audit across all seven debt categories | First week of every quarter |
+| --- | --- | --- |
+| [T-01 Evaluation Brief](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-01-evaluation-brief.md) | Team alignment on five contracts before work begins | Start of every feature |
+| [T-02 Quality Statement](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-02-quality-statement.md) | Technical spec for monitoring and CI systems | After T-01 is signed |
+| [T-03 Architecture Worksheet](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-03-architecture-worksheet.md) | Cost vs. faithfulness trade-off documentation | Before committing to a stack |
+| [T-04 Logging Schema](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-04-logging-schema.md) | Complete YAML spec for all four logging layers | Before going to production |
+| [T-05 Ingestion Fidelity Evaluator](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-05-ingestion-fidelity-evaluator.md) | LLM judge prompt for Contract 1 | After error analysis |
+| [T-06 Faithfulness Evaluator](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-06-faithfulness-evaluator.md) | LLM judge prompt for Contract 2 | After error analysis |
+| [T-07 Factuality Evaluator](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-07-factuality-evaluator.md) | LLM judge prompt for Contract 3 | After error analysis |
+| [T-08 Audio Quality Evaluator](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-08-audio-quality-evaluator.md) | LLM judge prompt for Contract 5 — four independent dimensions | After error analysis |
+| [T-09 Cross-Modal Consistency Evaluator](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-09-cross-modal-consistency-evaluator.md) | LLM judge prompt for Contract 4 | After error analysis |
+| [T-10 Gate Thresholds and Alert Rules](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-10-gate-thresholds-alert-rules.md) | Per-metric monitoring configuration with escalation policy | Before production monitoring |
+| [T-11 Regression Suite Coverage Audit](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-11-regression-suite-coverage-audit.md) | Coverage gap identification per taxonomy tag + media blob registry | Building and maintaining test suite |
+| [T-12 CI Gate Policy](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-12-ci-gate-policy.md) | Blocking conditions + false positive protocol | Before wiring CI |
+| [T-13 Driver Analysis Template](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-13-driver-analysis-template.md) | Structured root-cause analysis for any monitoring alert | Every time an alert fires |
+| [T-14 Decision Memo](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-14-decision-memo.md) | Evidence-backed Ship / Ramp / Hold / Rollback record | Every ship/hold decision |
+| [T-15 Experiment Pre-Registration](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-15-experiment-pre-registration.md) | Hypothesis, metric, and decision rule before data collection | Before any A/B experiment |
+| [T-16 Dataset Record](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-16-dataset-record.md) | Versioned dataset metadata with media blob registry | Creating or versioning datasets |
+| [T-17 Backlog Prioritization Table](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-17-backlog-prioritization-table.md) | Six-dimension priority formula with blast radius scoring | After error analysis |
+| [T-18 Evaluation Debt Register](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-18-evaluation-debt-register.md) | Quarterly governance audit across all seven debt categories | First week of every quarter |
+
+### DECODE Framework Templates (T-19 – T-22)
+
+These four templates support the DECODE translation workflow — converting product requirements into evaluation specifications. Use them alongside [`guides/multimodal-ai-evals-speak.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md).
+
+| Template | Purpose | When to Use |
+| --- | --- | --- |
+| [T-19 Eval Stub Template](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) | 7-section evaluation commitment authored by PM; lives inside PRD; seeds the full Eval Spec | During PRD authoring session — same session as the feature requirement |
+| [T-20 PRD Eval Requirements Section](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md) | Container section added to every AI feature PRD; holds Eval Stub + spec reference + governance commitments + launch gate summary | Add to your PRD standard template |
+| [T-21 Multimodal Eval Specification Template](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) | Full 15-section evaluation specification; authored by eval engineer from the Eval Stub; governs all launch gate decisions | Initiated at PRD Approved stage; completed before development begins |
+| [T-22 DECODE Translation Worksheet](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) | Guided session worksheet for the 90-minute Draft PRD session; walks PM and eval engineer through Steps D, E, and C together | Print or open in a shared doc at the start of every Draft PRD session |
 
 ---
 
@@ -109,7 +148,7 @@ TTL = Time to deploy in days
 **Why Blast Radius changes everything:** A parser fix that resolves a dropped-caption failure simultaneously resolves downstream faithfulness breaks and TTS mispronunciations sitting in the same causal chain. Blast radius is why an ingestion fix almost always outranks a prompt engineering fix — even when the prompt fix deploys faster.
 
 | Example Fix | S | F | C | TTL | B | U | Score |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | Parser upgrade — drops captions | 3 | 0.15 | 3 | 3d | 3 | 5 | **6.75** |
 | Pronunciation lexicon update | 2 | 0.12 | 3 | 1d | 1 | 2 | 1.44 |
 | Cross-modal consistency check | 3 | 0.08 | 2 | 7d | 2 | 3 | 0.41 |
@@ -121,7 +160,7 @@ TTL = Time to deploy in days
 The distribution of your evaluation test cases should change as your product matures. Using the same eval mix in development, release, and production is a quiet mistake — it hides the wrong failures at the wrong time.
 
 | Case Type | Development | Release (Gate) | Production |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Happy Paths | 15% | 35% | 45% |
 | Edge Cases | 30% | 20% | 5% |
 | **Ingestion Failures** | **25%** | **15% floor** | **15% floor** |
@@ -156,7 +195,7 @@ Each cycle tightens your taxonomy, improves your evaluators, and reduces the tim
 Applying this framework to real multimodal AI products in the wild.
 
 | Product | Category | Report |
-|---|---|---|
+| --- | --- | --- |
 | Huxe | Document-to-audio AI | Coming Soon |
 | Google NotebookLM | Document-to-audio AI | Coming soon |
 | HeyGen | AI video generation | Coming soon |
@@ -172,43 +211,20 @@ Applying this framework to real multimodal AI products in the wild.
 Working implementations of this framework's evaluators on major evaluation platforms.
 
 | Platform | Best For | Implementation |
-|---|---|---|
+| --- | --- | --- |
 | Braintrust | Dataset versioning, offline evaluation | Coming Soon |
 | Arize Phoenix | Embedding drift, production monitoring | Coming Soon |
 | Comet Opik | Teams using Comet for ML tracking | Coming Soon |
 | LangSmith | LangChain-native, audio playback in traces | Coming Soon |
 
 ---
-## Dashboards & Reports Design System
 
-A complete design specification and visual artifact set for a practitioner-grade evaluation platform that operationalizes this framework as an interactive environment rather than a static document.
-
-The design is grounded in the Huxe v3 evaluation report — every screen maps to a specific finding, failure pattern, or methodological commitment from a real evaluation.
-
-| What | Detail |
-| --- | --- |
-| Screens | 18 screens across Evaluation, Analysis, Products, and Governance sections |
-| Design system | Unified token set — contract colors, evidence badge system, pipeline stage colors, card elevation variants |
-| Data model | Full TypeScript entity definitions for all platform entities |
-| Novel patterns | Evidence provenance badges on every score · Causal chain tracker with blast radius narrative · Audio-native evaluation track · Safety Override Strip as structural section |
-| Frontend approach | Custom frontend over open-source eval backend (Arize Phoenix or Comet Opik) — replace the UI layer, retain the infrastructure |
-
-**The five design principles:**
-- **Upstream first** — failures originate upstream and appear downstream; the UI surfaces origin, not symptoms
-- **Evidence is not optional** — every score carries a [SIM] / [EST] / [REV] / [INF] / [LIVE] provenance badge
-- **Safety is architecturally above everything** — the Safety Override Strip precedes all contract cards and cannot be dismissed
-- **Data density is a feature** — tables are the correct UI for practitioner tools
-- **The report is the product** — every screen is a data entry point; the evaluation report assembles from live platform data at export time
-
-→ [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) for the full specification, data model, and screen artifacts.
-
----
 ## Evaluation Maturity Model
 
 Where is your team today?
 
 | Level | Status | Description |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Ad Hoc | No taxonomy. Decisions made by whoever argues most confidently. |
 | 2 | Instrumented | Logging live. At least one evaluator with documented kappa ≥ 0.70. |
 | 3 | Systematic | All five contracts have evaluators. CI gate blocking. Written decision memos. |
@@ -222,18 +238,20 @@ Where is your team today?
 ## Where to Start
 
 | You are... | Start here |
-|---|---|
-| New to multimodal AI evaluation | [`MultiModal AI Evaluations 101`](./guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) |
-| Building an evaluation program from scratch | [`Multimodal AI Evaluations Getting Started Guide`](./guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) |
-| Implementing a full evaluation program | [`Multimodal AI Evaluations Field Manual`](./guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) |
-| Looking for a specific template | [`/templates`](./templates) directory |
-| Responding to a production alert right now | [`T-13 Driver Analysis`](./templates/T-13-driver-analysis-template.md) |
-| Making a ship/hold decision | [`T-14 Decision Memo`](./templates/T-14-decision-memo.md) |
-| Running a quarterly program review | [`T-18 Evaluation Debt Register`](./templates/T-18-evaluation-debt-register.md) |
-| Evaluating a specific platform | [`/implementations`](./implementations) directory |
-| Viewing the evaluation platform UI design | [`/dashboards`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards) — 18 screen designs with design system |
-| Building an evaluation frontend | [`/dashboards/datamodels.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/dashboards/datamodels.md) — TypeScript data model and frontend build guide |
-| Reading evaluation reports | [`/reports`](./reports) directory |
+| --- | --- |
+| New to multimodal AI evaluation | [`MultiModal AI Evaluations 101`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) |
+| Building an evaluation program from scratch | [`Multimodal AI Evaluations Getting Started Guide`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) |
+| Implementing a full evaluation program | [`Multimodal AI Evaluations Field Manual`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) |
+| Translating PRDs and feature requests into eval specs | [`Multimodal AI Evals Speak`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) — the DECODE framework |
+| Running a PRD authoring session with eval requirements | [`T-22 DECODE Translation Worksheet`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) |
+| Embedding eval requirements into a PRD right now | [`T-19 Eval Stub Template`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) |
+| Writing a full eval specification for a feature | [`T-21 Multimodal Eval Specification Template`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) |
+| Looking for a specific infrastructure template | [`/templates`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates) directory |
+| Responding to a production alert right now | [`T-13 Driver Analysis`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-13-driver-analysis-template.md) |
+| Making a ship/hold decision | [`T-14 Decision Memo`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-14-decision-memo.md) |
+| Running a quarterly program review | [`T-18 Evaluation Debt Register`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/templates/T-18-evaluation-debt-register.md) |
+| Evaluating a specific platform | [`/implementations`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/implementations) directory |
+| Reading evaluation reports | [`/reports`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/reports) directory |
 
 ---
 
@@ -253,9 +271,11 @@ Where is your team today?
 
 **Consumption Drift** — Same technical output quality, declining user engagement. A cluster of listeners dropping off at the same audio timestamp is a precision failure detector that no LLM judge can replicate.
 
-**Evidence Provenance** — Every score in the evaluation platform carries a badge classifying how it was derived: [SIM] simulated · [EST] estimated from public data · [REV] supported by public evidence · [INF] architectural inference · [LIVE] live measured. Simulated and live-measured data must never look the same.
+**Specification Debt** — Evaluation criteria derived after the fact from complaints, regressions, and launch failures rather than from product requirements established before development begins. The DECODE framework exists to prevent this.
 
-**Blast Radius Explanation** — A required narrative on every causal chain record explaining why fixing the upstream root resolves multiple downstream failures simultaneously, and why this makes the upstream fix rank higher in the priority formula than a faster leaf-node fix. Without this explanation, blast radius is a number nobody acts on.
+**Eval Stub** — A 7-section structured commitment authored by a PM during the PRD authoring session. Captures quality contracts triggered, modalities involved, top failure modes, P0 launch gate thresholds, high-risk slice, and out-of-scope conditions. Seeds the full Eval Specification without a separate translation meeting.
+
+**DECODE** — The six-step translation methodology for converting product requirements into multimodal eval specifications: Decompose → Enumerate → Classify → Operationalize → Define → Express. The discipline that closes the gap between what a product says it does and what evaluation evidence can prove.
 
 ---
 
@@ -264,7 +284,7 @@ Where is your team today?
 Thirteen named failure patterns with pipeline origins and fix surfaces.
 
 | Pattern | Description | Origin | Fix Surface |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | The Missing Caption | Parser drops figure caption; AI invents content | Stage 1 | Ingestion/Parsing |
 | Careless Whisper | ASR hallucinates words during silence | Stage 1 | OCR/ASR + Silence Gate |
 | Modality Bias Retrieval | Retriever returns only text chunks in figure-heavy corpus | Stage 4 | Reranking + RAG |
@@ -294,8 +314,7 @@ GitHub: https://github.com/hsrivatsa/Multimodal-AI-Evaluations
 
 ## Author
 
-**Harsha Srivatsa**
-AI Product Builder · AI Solutions Architect · AI Product Leader
+**Harsha Srivatsa** — AI Product Builder · AI Solutions Architect · AI Product Leader
 
 [LinkedIn](https://www.linkedin.com/in/harshasrivatsa) · [GitHub](https://github.com/hsrivatsa)
 
@@ -303,7 +322,7 @@ AI Product Builder · AI Solutions Architect · AI Product Leader
 
 ## Contributing
 
-Contributions welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for guidelines.
+Contributions welcome. See [`CONTRIBUTING.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/CONTRIBUTING.md) for guidelines.
 
 Priority areas: product evaluation reports · platform implementation notebooks · translations
 
@@ -311,10 +330,9 @@ Priority areas: product evaluation reports · platform implementation notebooks 
 
 ## License
 
-MIT License — see [`LICENSE`](./LICENSE) for details.
+MIT License — see [`LICENSE`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/LICENSE) for details.
 Free to use, adapt, and build upon with attribution.
 
 ---
 
 *The best multimodal AI evaluation program is the one your team actually runs.*
-
