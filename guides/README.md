@@ -13,7 +13,7 @@ The first three guides are designed to be read in sequence. Each builds on the p
 | 1 | [101 Guide](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) | The mental model — concepts, failure modes, and why multimodal evaluation is different | 2–3 hrs read |
 | 2 | [Getting Started Guide](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) | The navigation layer — where to start, how to move through the framework, phase-by-phase steps | 1 hr read |
 | 3 | [Field Manual](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) | The complete operational discipline — 20 chapters, all five contracts, every fix surface, full governance | Reference |
-| 4 | [Multimodal AI Evals Speak](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) | The translation layer — converting PRDs, feature requests, and stakeholder requirements into evaluation specifications using the DECODE framework | Practitioner tool |
+| 4 | [Multimodal AI Evals Speak](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-requirements.md) | The translation layer — converting PRDs, feature requests, and stakeholder requirements into evaluation specifications using the DECODE framework | Practitioner tool |
 
 ---
 
@@ -113,7 +113,7 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 ## Guide 4 — Multimodal AI Evals Speak
 
-**File:** [`multimodal-ai-evals-speak.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md)
+**File:** [`multimodal-ai-evals-speak.md`](https://github.com/hsrivatsa/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-requirements.md)
 
 **Who it is for:** AI Product Managers, AI Solutions Architects, ML Engineers, QA and Eval Engineers, and Team Leads who receive product requirements and need a systematic method for converting them into executable evaluation specifications. Assumes basic familiarity with the Five Quality Contracts (from the 101 Guide) but can be used independently.
 
