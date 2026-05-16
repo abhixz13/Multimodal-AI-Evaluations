@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-1. [Purpose and Scope](#1-purpose-and-scope)
+1. [Purpose and Scope](##1-purpose-and-scope)
 2. [The Translation Problem](#2-the-translation-problem)
 3. [The Two Languages: PRD Speak vs. Evals Speak](#3-the-two-languages-prd-speak-vs-evals-speak)
 4. [Why Multimodal Makes Translation Harder](#4-why-multimodal-makes-translation-harder)
