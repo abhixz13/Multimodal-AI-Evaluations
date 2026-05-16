@@ -1,1 +1,1 @@
-![Superpowers](path/to/image.png)
+![Superpowers](memes/1778183408559.jfif)
