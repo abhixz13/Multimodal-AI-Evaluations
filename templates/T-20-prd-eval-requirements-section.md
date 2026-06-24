@@ -1,6 +1,6 @@
 # PRD Eval Requirements Section Template
 
-**Repository:** `abhixz13/Multimodal-AI-Evaluations`  
+**Repository:** Multimodal-AI-Evaluations  
 **File:** `templates/prd-eval-requirements-section.md`  
 **Parent Document:** Multimodal AI Evals Speak (v2.1), Section 20.2  
 **Usage:** Add this section to every AI feature PRD. It is the container for the Eval Stub and the governance commitments that make evaluation a first-class requirement — not an afterthought.
@@ -37,7 +37,7 @@
 
 ### B. Eval Specification Reference
 
-The full Eval Specification is the detailed, executable version of the Eval Stub. It is authored by the Eval Owner using `templates/multimodal-eval-spec-template.md` and stored in the `abhixz13/Multimodal-AI-Evaluations` repository.
+The full Eval Specification is the detailed, executable version of the Eval Stub. It is authored by the Eval Owner using `templates/multimodal-eval-spec-template.md` and stored in the Multimodal-AI-Evaluations repository.
 
 | Field | Value |
 |---|---|
@@ -85,6 +85,6 @@ The following commitments are made at PRD Approval time. Both the Product Owner 
 
 ---
 
-*Part of the `abhixz13/Multimodal-AI-Evaluations` template library.*  
+*Part of the Multimodal-AI-Evaluations template library.*  
 *Parent framework: Multimodal AI Evals Speak v2.1, Section 20.2*  
 *See also: `templates/eval-stub-template.md` · `templates/multimodal-eval-spec-template.md` · `worksheets/decode-translation-worksheet.md`*

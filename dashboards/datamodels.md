@@ -365,4 +365,4 @@ Each entity maps to one or more UI components:
 
 ---
 
-*Framework: Multimodal AI Product Evaluation · abhixz13/Multimodal-AI-Evaluations*
+*Framework: Multimodal AI Product Evaluation · Multimodal-AI-Evaluations*

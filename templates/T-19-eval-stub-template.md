@@ -1,6 +1,6 @@
 # Eval Stub Template
 
-**Repository:** `abhixz13/Multimodal-AI-Evaluations`  
+**Repository:** Multimodal-AI-Evaluations  
 **File:** `templates/eval-stub-template.md`  
 **Parent Document:** Multimodal AI Evals Speak (v2.1), Section 20.1  
 **Usage:** Copy this template into the Evaluation Requirements section of every AI feature PRD. Complete during the Draft PRD session alongside the feature requirement. See the Concurrent Authoring Protocol (Section 20.3) for session structure and time budget.
@@ -155,6 +155,6 @@ Both signatures required before the PRD advances to Approved status.
 
 ---
 
-*Part of the `abhixz13/Multimodal-AI-Evaluations` template library.*  
+*Part of the Multimodal-AI-Evaluations template library.*  
 *Parent framework: Multimodal AI Evals Speak v2.1, Section 20.1*  
 *See also: `templates/prd-eval-requirements-section.md` · `templates/multimodal-eval-spec-template.md` · `worksheets/decode-translation-worksheet.md`*

@@ -1,6 +1,6 @@
 # DECODE Translation Worksheet
 
-**Repository:** `abhixz13/Multimodal-AI-Evaluations`  
+**Repository:** Multimodal-AI-Evaluations  
 **File:** `worksheets/decode-translation-worksheet.md`  
 **Parent Document:** Multimodal AI Evals Speak (v2.1), Section 6 and Section 20.3  
 **Usage:** Use this worksheet during the 90-minute Draft PRD Session. PM and Eval Engineer work through it together. Output feeds directly into the Eval Stub template. Print double-sided, or work in a shared doc.
@@ -225,6 +225,6 @@ If any answer is "yes" or "possibly," add a corresponding failure mode in Step C
 
 ---
 
-*Part of the `abhixz13/Multimodal-AI-Evaluations` template library.*  
+*Part of the Multimodal-AI-Evaluations template library.*  
 *Parent framework: Multimodal AI Evals Speak v2.1, Sections 6 and 20.3*  
 *See also: `templates/eval-stub-template.md` · `templates/prd-eval-requirements-section.md` · `templates/multimodal-eval-spec-template.md`*

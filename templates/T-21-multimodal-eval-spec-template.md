@@ -1,6 +1,6 @@
 # Multimodal Eval Specification Template
 
-**Repository:** `abhixz13/Multimodal-AI-Evaluations`  
+**Repository:** Multimodal-AI-Evaluations  
 **File:** `templates/multimodal-eval-spec-template.md`  
 **Parent Document:** Multimodal AI Evals Speak (v2.1), Section 11  
 **Usage:** Use this template to produce a formal Eval Specification for any AI feature. Authored by the Eval Owner, building from the completed Eval Stub in the PRD. Must be approved before development begins.
@@ -291,6 +291,6 @@ GATE OWNERSHIP:
 
 ---
 
-*Part of the `abhixz13/Multimodal-AI-Evaluations` template library.*  
+*Part of the Multimodal-AI-Evaluations template library.*  
 *Parent framework: Multimodal AI Evals Speak v2.1, Section 11*  
 *See also: `templates/eval-stub-template.md` · `templates/prd-eval-requirements-section.md` · `worksheets/decode-translation-worksheet.md`*

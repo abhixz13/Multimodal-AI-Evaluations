@@ -620,7 +620,7 @@ The pattern is consistent: every stakeholder phrase compresses two or three dist
 
 Use this template literally. Field discipline is part of the work. The most under-used section is **Section 12 — Known Limitations.** Every eval suite has them. Listing them explicitly is what separates a spec that is honest from a spec that is theater.
 
-> **Standalone file:** The full standalone version of this template is [`T-21-multimodal-eval-spec-template.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md). Use that file when creating a new Eval Spec for a feature.
+> **Standalone file:** The full standalone version of this template is [`T-21-multimodal-eval-spec-template.md`](../templates/T-21-multimodal-eval-spec-template.md). Use that file when creating a new Eval Spec for a feature.
 
 ```markdown
 # Multimodal Eval Specification: [Feature Name]
@@ -1408,7 +1408,7 @@ Silence is not exclusion — unstated scope will be assumed to be in scope by th
 
 This is the section that gets added to every AI feature PRD. It is not the Eval Stub — it is the *container* that holds the Eval Stub plus the pointers and commitments that governance requires.
 
-Copy this section template into your PRD standard template. Every AI feature PRD should contain it. The standalone file is [`T-20-prd-eval-requirements-section.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md).
+Copy this section template into your PRD standard template. Every AI feature PRD should contain it. The standalone file is [`T-20-prd-eval-requirements-section.md`](../templates/T-20-prd-eval-requirements-section.md).
 
 ```markdown
 ---
@@ -1450,7 +1450,7 @@ This feature will not ship unless all P0 thresholds in the Eval Spec are met.
 
 The DECODE methodology is most effective when run *during* PRD authoring — not after. This protocol defines the workflow, the session structure, the participant roles, and the artifact state at each stage of the PRD lifecycle.
 
-> **Printable session guide:** A standalone worksheet for running the 90-minute Draft PRD session is available at [`T-22-decode-translation-worksheet.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md). Print it or open it in a shared doc before the session begins.
+> **Printable session guide:** A standalone worksheet for running the 90-minute Draft PRD session is available at [`T-22-decode-translation-worksheet.md`](../templates/T-22-decode-translation-worksheet.md). Print it or open it in a shared doc before the session begins.
 
 #### The Core Principle
 
@@ -1567,10 +1567,10 @@ A PM-only stub is not a complete stub. It is a starting point that reduces the e
 ---
 
 **Companion guides:**
-[Practitioner's Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) · [101 Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) · [Getting Started Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf)
+[Practitioner's Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) · [101 Guide](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) · [Getting Started Guide](Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf)
 
 **Companion templates for this document:**
-[T-19 Eval Stub Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) · [T-20 PRD Eval Requirements Section](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md) · [T-21 Multimodal Eval Specification Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) · [T-22 DECODE Translation Worksheet](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md)
+[T-19 Eval Stub Template](../templates/T-19-eval-stub-template.md) · [T-20 PRD Eval Requirements Section](../templates/T-20-prd-eval-requirements-section.md) · [T-21 Multimodal Eval Specification Template](../templates/T-21-multimodal-eval-spec-template.md) · [T-22 DECODE Translation Worksheet](../templates/T-22-decode-translation-worksheet.md)
 
 *Version 2.1. Contributions and corrections welcome via PR.*
 

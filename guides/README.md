@@ -10,16 +10,16 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 | Step | Guide | What You Get | Time |
 | --- | --- | --- | --- |
-| 1 | [101 Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) | The mental model — concepts, failure modes, and why multimodal evaluation is different | 2–3 hrs read |
-| 2 | [Getting Started Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) | The navigation layer — where to start, how to move through the framework, phase-by-phase steps | 1 hr read |
-| 3 | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) | The complete operational discipline — 20 chapters, all five contracts, every fix surface, full governance | Reference |
-| 4 | [Multimodal AI Evals Speak](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-requirements.md) | The translation layer — converting PRDs, feature requests, and stakeholder requirements into evaluation specifications using the DECODE framework | Practitioner tool |
+| 1 | [101 Guide](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) | The mental model — concepts, failure modes, and why multimodal evaluation is different | 2–3 hrs read |
+| 2 | [Getting Started Guide](Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) | The navigation layer — where to start, how to move through the framework, phase-by-phase steps | 1 hr read |
+| 3 | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) | The complete operational discipline — 20 chapters, all five contracts, every fix surface, full governance | Reference |
+| 4 | [Multimodal AI Evals Speak](multimodal-ai-evals-requirements.md) | The translation layer — converting PRDs, feature requests, and stakeholder requirements into evaluation specifications using the DECODE framework | Practitioner tool |
 
 ---
 
 ## Guide 1 — 101 Guide
 
-**File:** [`Multimodal AI Product Evaluation — 101 Guide - Enhanced.pdf`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf)
+**File:** [`Multimodal AI Product Evaluation — 101 Guide - Enhanced.pdf`](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf)
 
 **Who it is for:** Anyone new to multimodal AI evaluation. No prior evaluation experience assumed.
 
@@ -42,7 +42,7 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 ## Guide 2 — Getting Started Guide
 
-**File:** [`Multimodal AI Product Evaluation - Getting Started.pdf`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf)
+**File:** [`Multimodal AI Product Evaluation - Getting Started.pdf`](Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf)
 
 **Who it is for:** Practitioners ready to build or improve an evaluation program. Assumes the 101 Guide has been read, or that you have some evaluation background.
 
@@ -70,7 +70,7 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 ## Guide 3 — Practitioner's Field Manual
 
-**File:** [`Multimodal AI Product Evaluation - The Practioner's Field Manual - v2.1.pdf`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf)
+**File:** [`Multimodal AI Product Evaluation - The Practioner's Field Manual - v2.1.pdf`](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf)
 
 **Who it is for:** Practitioners building or running a production multimodal AI evaluation program. The complete reference.
 
@@ -113,7 +113,7 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 ## Guide 4 — Multimodal AI Evals Speak
 
-**File:** [`multimodal-ai-evals-speak.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-requirements.md)
+**File:** [`multimodal-ai-evals-speak.md`](multimodal-ai-evals-requirements.md)
 
 **Who it is for:** AI Product Managers, AI Solutions Architects, ML Engineers, QA and Eval Engineers, and Team Leads who receive product requirements and need a systematic method for converting them into executable evaluation specifications. Assumes basic familiarity with the Five Quality Contracts (from the 101 Guide) but can be used independently.
 
@@ -149,10 +149,10 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 | Template | Purpose |
 | --- | --- |
-| [T-19 Eval Stub Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) | 7-section PM-authored artifact that lives in the PRD; seeds the full Eval Spec |
-| [T-20 PRD Eval Requirements Section](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md) | Container section embedded in every AI feature PRD |
-| [T-21 Multimodal Eval Specification Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) | Full 15-section eval contract authored by the eval engineer |
-| [T-22 DECODE Translation Worksheet](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) | Guided 90-minute session worksheet for PM + eval engineer |
+| [T-19 Eval Stub Template](../templates/T-19-eval-stub-template.md) | 7-section PM-authored artifact that lives in the PRD; seeds the full Eval Spec |
+| [T-20 PRD Eval Requirements Section](../templates/T-20-prd-eval-requirements-section.md) | Container section embedded in every AI feature PRD |
+| [T-21 Multimodal Eval Specification Template](../templates/T-21-multimodal-eval-spec-template.md) | Full 15-section eval contract authored by the eval engineer |
+| [T-22 DECODE Translation Worksheet](../templates/T-22-decode-translation-worksheet.md) | Guided 90-minute session worksheet for PM + eval engineer |
 
 **Key insight from this guide:**
 > *Every stakeholder sentence is a compressed claim. The translator's job is to refuse that compression — politely and repeatedly — until every quality dimension is named, every modality is inventoried, and every failure mode is concrete enough for a reviewer to score from input and output alone.*
@@ -163,55 +163,55 @@ The first three guides are designed to be read in sequence. Each builds on the p
 
 | You are... | Go here |
 | --- | --- |
-| Encountering multimodal AI evaluation for the first time | [101 Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 1 |
-| Confused about why one accuracy score is not enough | [101 Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 5: The Four Contracts |
-| Trying to understand where failures actually come from | [101 Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 3: The Pipeline |
-| Ready to build an evaluation program | [Getting Started Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) — Phase 1 |
-| Mid-program and need to build evaluators | [Getting Started Guide](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) — Phase 3 |
-| Running a production alert investigation | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 12: Driver Analysis |
-| Making a ship/hold/rollback decision | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 14: Decision-Making |
-| Planning a quarterly governance review | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 18: Governance |
-| Looking for the right tool for your situation | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 19: Build vs. Buy |
-| Starting from zero with 12 weeks ahead | [Field Manual](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 20: The 12-Week Plan |
-| Translating a PRD or feature request into an eval spec | [Multimodal AI Evals Speak](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) — Section 6: DECODE Methodology |
-| Running a PRD authoring session with a PM and eval engineer | [T-22 DECODE Translation Worksheet](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) — print or open before the session |
-| Embedding eval requirements into a PRD right now (solo PM) | [T-19 Eval Stub Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) — Sections 1–3 minimum for Draft stage |
-| Writing a full evaluation specification for a feature | [T-21 Multimodal Eval Specification Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) — start from the completed Eval Stub |
-| Decoding a stakeholder phrase into evaluation primitives | [Multimodal AI Evals Speak](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) — Section 10: Vocabulary Mapping Dictionary |
-| Auditing whether an eval spec covers all modalities and contracts | [Multimodal AI Evals Speak](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) — Section 14: Eval Coverage Matrix |
+| Encountering multimodal AI evaluation for the first time | [101 Guide](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 1 |
+| Confused about why one accuracy score is not enough | [101 Guide](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 5: The Four Contracts |
+| Trying to understand where failures actually come from | [101 Guide](Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) — Part 3: The Pipeline |
+| Ready to build an evaluation program | [Getting Started Guide](Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) — Phase 1 |
+| Mid-program and need to build evaluators | [Getting Started Guide](Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) — Phase 3 |
+| Running a production alert investigation | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 12: Driver Analysis |
+| Making a ship/hold/rollback decision | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 14: Decision-Making |
+| Planning a quarterly governance review | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 18: Governance |
+| Looking for the right tool for your situation | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 19: Build vs. Buy |
+| Starting from zero with 12 weeks ahead | [Field Manual](Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) — Chapter 20: The 12-Week Plan |
+| Translating a PRD or feature request into an eval spec | [Multimodal AI Evals Speak](multimodal-ai-evals-speak.md) — Section 6: DECODE Methodology |
+| Running a PRD authoring session with a PM and eval engineer | [T-22 DECODE Translation Worksheet](../templates/T-22-decode-translation-worksheet.md) — print or open before the session |
+| Embedding eval requirements into a PRD right now (solo PM) | [T-19 Eval Stub Template](../templates/T-19-eval-stub-template.md) — Sections 1–3 minimum for Draft stage |
+| Writing a full evaluation specification for a feature | [T-21 Multimodal Eval Specification Template](../templates/T-21-multimodal-eval-spec-template.md) — start from the completed Eval Stub |
+| Decoding a stakeholder phrase into evaluation primitives | [Multimodal AI Evals Speak](multimodal-ai-evals-speak.md) — Section 10: Vocabulary Mapping Dictionary |
+| Auditing whether an eval spec covers all modalities and contracts | [Multimodal AI Evals Speak](multimodal-ai-evals-speak.md) — Section 14: Eval Coverage Matrix |
 
 ---
 
 ## How the Guides Connect to the Templates
 
-Every chapter in the Field Manual that has an associated template includes a reference callout. Guide 4 (Multimodal AI Evals Speak) has four dedicated companion templates. All templates live in [`/templates`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates).
+Every chapter in the Field Manual that has an associated template includes a reference callout. Guide 4 (Multimodal AI Evals Speak) has four dedicated companion templates. All templates live in [`/templates`](../templates).
 
 ### Field Manual Templates (T-01 – T-18)
 
 | Guide section | Template |
 | --- | --- |
-| Getting Started Phase 1 — Evaluation Brief | [T-01](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-01-evaluation-brief.md) |
-| Field Manual Ch 5 — Quality Statement | [T-02](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-02-quality-statement.md) |
-| Getting Started Phase 1 — Architecture | [T-03](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-03-architecture-worksheet.md) |
-| Getting Started Phase 1 — Logging | [T-04](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-04-logging-schema.md) |
-| Getting Started Phase 3 — Evaluator Prompts | [T-05](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-05-ingestion-fidelity-evaluator.md) through [T-09](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-09-cross-modal-consistency-evaluator.md) |
-| Field Manual Ch 9 — Monitoring | [T-10](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-10-gate-thresholds-alert-rules.md) |
-| Getting Started Phase 3 — CI Gating | [T-11](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-11-regression-suite-coverage-audit.md) · [T-12](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-12-ci-gate-policy.md) |
-| Field Manual Ch 12 — Driver Analysis | [T-13](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-13-driver-analysis-template.md) |
-| Field Manual Ch 14 — Decisions | [T-14](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-14-decision-memo.md) |
-| Field Manual Ch 15 — Experiments | [T-15](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-15-experiment-pre-registration.md) |
-| Field Manual Ch 16 — Datasets | [T-16](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-16-dataset-record.md) |
-| Field Manual Ch 17 — Prioritization | [T-17](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-17-backlog-prioritization-table.md) |
-| Field Manual Ch 18 — Governance | [T-18](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-18-evaluation-debt-register.md) |
+| Getting Started Phase 1 — Evaluation Brief | [T-01](../templates/T-01-evaluation-brief.md) |
+| Field Manual Ch 5 — Quality Statement | [T-02](../templates/T-02-quality-statement.md) |
+| Getting Started Phase 1 — Architecture | [T-03](../templates/T-03-architecture-worksheet.md) |
+| Getting Started Phase 1 — Logging | [T-04](../templates/T-04-logging-schema.md) |
+| Getting Started Phase 3 — Evaluator Prompts | [T-05](../templates/T-05-ingestion-fidelity-evaluator.md) through [T-09](../templates/T-09-cross-modal-consistency-evaluator.md) |
+| Field Manual Ch 9 — Monitoring | [T-10](../templates/T-10-gate-thresholds-alert-rules.md) |
+| Getting Started Phase 3 — CI Gating | [T-11](../templates/T-11-regression-suite-coverage-audit.md) · [T-12](../templates/T-12-ci-gate-policy.md) |
+| Field Manual Ch 12 — Driver Analysis | [T-13](../templates/T-13-driver-analysis-template.md) |
+| Field Manual Ch 14 — Decisions | [T-14](../templates/T-14-decision-memo.md) |
+| Field Manual Ch 15 — Experiments | [T-15](../templates/T-15-experiment-pre-registration.md) |
+| Field Manual Ch 16 — Datasets | [T-16](../templates/T-16-dataset-record.md) |
+| Field Manual Ch 17 — Prioritization | [T-17](../templates/T-17-backlog-prioritization-table.md) |
+| Field Manual Ch 18 — Governance | [T-18](../templates/T-18-evaluation-debt-register.md) |
 
 ### Multimodal AI Evals Speak Templates (T-19 – T-22)
 
 | Guide section | Template | Who authors it | When |
 | --- | --- | --- | --- |
-| Section 20.1 — The Eval Stub | [T-19](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) | PM | Same session as feature requirement |
-| Section 20.2 — PRD Eval Requirements Section | [T-20](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md) | PM | Embedded in every AI feature PRD |
-| Section 11 — Eval Specification Template | [T-21](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) | Eval Engineer | After PRD Approved; before development starts |
-| Section 20.3 — Concurrent Authoring Protocol | [T-22](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) | PM + Eval Engineer | 90-minute Draft PRD session |
+| Section 20.1 — The Eval Stub | [T-19](../templates/T-19-eval-stub-template.md) | PM | Same session as feature requirement |
+| Section 20.2 — PRD Eval Requirements Section | [T-20](../templates/T-20-prd-eval-requirements-section.md) | PM | Embedded in every AI feature PRD |
+| Section 11 — Eval Specification Template | [T-21](../templates/T-21-multimodal-eval-spec-template.md) | Eval Engineer | After PRD Approved; before development starts |
+| Section 20.3 — Concurrent Authoring Protocol | [T-22](../templates/T-22-decode-translation-worksheet.md) | PM + Eval Engineer | 90-minute Draft PRD session |
 
 ---
 

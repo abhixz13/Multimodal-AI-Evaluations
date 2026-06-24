@@ -22,10 +22,10 @@ This framework teaches you to find failures where they originate, not where they
 
 | Directory | Contents |
 | --- | --- |
-| [`/guides`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides) | 101 Guide · Getting Started Guide · Practitioner's Field Manual (20 chapters) · **Multimodal AI Evals Speak** (new) · DECODE Translation Worksheet |
-| [`/templates`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates) | 22 production-ready evaluation templates (T-01 through T-22) |
-| [`/reports`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/reports) | Evaluation reports applying this framework to real multimodal AI products |
-| [`/implementations`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/implementations) | Platform-specific implementations using Braintrust, Arize, Comet Opik, LangSmith |
+| [`/guides`](guides) | 101 Guide · Getting Started Guide · Practitioner's Field Manual (20 chapters) · **Multimodal AI Evals Speak** (new) · DECODE Translation Worksheet |
+| [`/templates`](templates) | 22 production-ready evaluation templates (T-01 through T-22) |
+| [`/reports`](reports) | Evaluation reports applying this framework to real multimodal AI products |
+| [`/implementations`](implementations) | Platform-specific implementations using Braintrust, Arize, Comet Opik, LangSmith |
 
 ---
 
@@ -86,7 +86,7 @@ E — Express as a formal Eval Specification
 - **Eval Specification** — the full 15-section evaluation contract, authored by the eval engineer from the Eval Stub, governs all launch gate decisions.
 - **PRD Eval Requirements Section** — the governance container embedded in every AI feature PRD that holds the Eval Stub, spec reference, and launch gate commitments.
 
-The complete framework is documented in [`guides/multimodal-ai-evals-speak.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md), with all four companion templates in `/templates`.
+The complete framework is documented in [`guides/multimodal-ai-evals-speak.md`](guides/multimodal-ai-evals-speak.md), with all four companion templates in `/templates`.
 
 ---
 
@@ -98,35 +98,35 @@ Every template is production-ready. Copy, adapt to your product, fill in before 
 
 | Template | Purpose | When to Use |
 | --- | --- | --- |
-| [T-01 Evaluation Brief](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-01-evaluation-brief.md) | Team alignment on five contracts before work begins | Start of every feature |
-| [T-02 Quality Statement](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-02-quality-statement.md) | Technical spec for monitoring and CI systems | After T-01 is signed |
-| [T-03 Architecture Worksheet](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-03-architecture-worksheet.md) | Cost vs. faithfulness trade-off documentation | Before committing to a stack |
-| [T-04 Logging Schema](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-04-logging-schema.md) | Complete YAML spec for all four logging layers | Before going to production |
-| [T-05 Ingestion Fidelity Evaluator](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-05-ingestion-fidelity-evaluator.md) | LLM judge prompt for Contract 1 | After error analysis |
-| [T-06 Faithfulness Evaluator](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-06-faithfulness-evaluator.md) | LLM judge prompt for Contract 2 | After error analysis |
-| [T-07 Factuality Evaluator](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-07-factuality-evaluator.md) | LLM judge prompt for Contract 3 | After error analysis |
-| [T-08 Audio Quality Evaluator](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-08-audio-quality-evaluator.md) | LLM judge prompt for Contract 5 — four independent dimensions | After error analysis |
-| [T-09 Cross-Modal Consistency Evaluator](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-09-cross-modal-consistency-evaluator.md) | LLM judge prompt for Contract 4 | After error analysis |
-| [T-10 Gate Thresholds and Alert Rules](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-10-gate-thresholds-alert-rules.md) | Per-metric monitoring configuration with escalation policy | Before production monitoring |
-| [T-11 Regression Suite Coverage Audit](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-11-regression-suite-coverage-audit.md) | Coverage gap identification per taxonomy tag + media blob registry | Building and maintaining test suite |
-| [T-12 CI Gate Policy](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-12-ci-gate-policy.md) | Blocking conditions + false positive protocol | Before wiring CI |
-| [T-13 Driver Analysis Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-13-driver-analysis-template.md) | Structured root-cause analysis for any monitoring alert | Every time an alert fires |
-| [T-14 Decision Memo](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-14-decision-memo.md) | Evidence-backed Ship / Ramp / Hold / Rollback record | Every ship/hold decision |
-| [T-15 Experiment Pre-Registration](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-15-experiment-pre-registration.md) | Hypothesis, metric, and decision rule before data collection | Before any A/B experiment |
-| [T-16 Dataset Record](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-16-dataset-record.md) | Versioned dataset metadata with media blob registry | Creating or versioning datasets |
-| [T-17 Backlog Prioritization Table](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-17-backlog-prioritization-table.md) | Six-dimension priority formula with blast radius scoring | After error analysis |
-| [T-18 Evaluation Debt Register](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-18-evaluation-debt-register.md) | Quarterly governance audit across all seven debt categories | First week of every quarter |
+| [T-01 Evaluation Brief](templates/T-01-evaluation-brief.md) | Team alignment on five contracts before work begins | Start of every feature |
+| [T-02 Quality Statement](templates/T-02-quality-statement.md) | Technical spec for monitoring and CI systems | After T-01 is signed |
+| [T-03 Architecture Worksheet](templates/T-03-architecture-worksheet.md) | Cost vs. faithfulness trade-off documentation | Before committing to a stack |
+| [T-04 Logging Schema](templates/T-04-logging-schema.md) | Complete YAML spec for all four logging layers | Before going to production |
+| [T-05 Ingestion Fidelity Evaluator](templates/T-05-ingestion-fidelity-evaluator.md) | LLM judge prompt for Contract 1 | After error analysis |
+| [T-06 Faithfulness Evaluator](templates/T-06-faithfulness-evaluator.md) | LLM judge prompt for Contract 2 | After error analysis |
+| [T-07 Factuality Evaluator](templates/T-07-factuality-evaluator.md) | LLM judge prompt for Contract 3 | After error analysis |
+| [T-08 Audio Quality Evaluator](templates/T-08-audio-quality-evaluator.md) | LLM judge prompt for Contract 5 — four independent dimensions | After error analysis |
+| [T-09 Cross-Modal Consistency Evaluator](templates/T-09-cross-modal-consistency-evaluator.md) | LLM judge prompt for Contract 4 | After error analysis |
+| [T-10 Gate Thresholds and Alert Rules](templates/T-10-gate-thresholds-alert-rules.md) | Per-metric monitoring configuration with escalation policy | Before production monitoring |
+| [T-11 Regression Suite Coverage Audit](templates/T-11-regression-suite-coverage-audit.md) | Coverage gap identification per taxonomy tag + media blob registry | Building and maintaining test suite |
+| [T-12 CI Gate Policy](templates/T-12-ci-gate-policy.md) | Blocking conditions + false positive protocol | Before wiring CI |
+| [T-13 Driver Analysis Template](templates/T-13-driver-analysis-template.md) | Structured root-cause analysis for any monitoring alert | Every time an alert fires |
+| [T-14 Decision Memo](templates/T-14-decision-memo.md) | Evidence-backed Ship / Ramp / Hold / Rollback record | Every ship/hold decision |
+| [T-15 Experiment Pre-Registration](templates/T-15-experiment-pre-registration.md) | Hypothesis, metric, and decision rule before data collection | Before any A/B experiment |
+| [T-16 Dataset Record](templates/T-16-dataset-record.md) | Versioned dataset metadata with media blob registry | Creating or versioning datasets |
+| [T-17 Backlog Prioritization Table](templates/T-17-backlog-prioritization-table.md) | Six-dimension priority formula with blast radius scoring | After error analysis |
+| [T-18 Evaluation Debt Register](templates/T-18-evaluation-debt-register.md) | Quarterly governance audit across all seven debt categories | First week of every quarter |
 
 ### DECODE Framework Templates (T-19 – T-22)
 
-These four templates support the DECODE translation workflow — converting product requirements into evaluation specifications. Use them alongside [`guides/multimodal-ai-evals-speak.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md).
+These four templates support the DECODE translation workflow — converting product requirements into evaluation specifications. Use them alongside [`guides/multimodal-ai-evals-speak.md`](guides/multimodal-ai-evals-speak.md).
 
 | Template | Purpose | When to Use |
 | --- | --- | --- |
-| [T-19 Eval Stub Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) | 7-section evaluation commitment authored by PM; lives inside PRD; seeds the full Eval Spec | During PRD authoring session — same session as the feature requirement |
-| [T-20 PRD Eval Requirements Section](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-20-prd-eval-requirements-section.md) | Container section added to every AI feature PRD; holds Eval Stub + spec reference + governance commitments + launch gate summary | Add to your PRD standard template |
-| [T-21 Multimodal Eval Specification Template](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) | Full 15-section evaluation specification; authored by eval engineer from the Eval Stub; governs all launch gate decisions | Initiated at PRD Approved stage; completed before development begins |
-| [T-22 DECODE Translation Worksheet](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) | Guided session worksheet for the 90-minute Draft PRD session; walks PM and eval engineer through Steps D, E, and C together | Print or open in a shared doc at the start of every Draft PRD session |
+| [T-19 Eval Stub Template](templates/T-19-eval-stub-template.md) | 7-section evaluation commitment authored by PM; lives inside PRD; seeds the full Eval Spec | During PRD authoring session — same session as the feature requirement |
+| [T-20 PRD Eval Requirements Section](templates/T-20-prd-eval-requirements-section.md) | Container section added to every AI feature PRD; holds Eval Stub + spec reference + governance commitments + launch gate summary | Add to your PRD standard template |
+| [T-21 Multimodal Eval Specification Template](templates/T-21-multimodal-eval-spec-template.md) | Full 15-section evaluation specification; authored by eval engineer from the Eval Stub; governs all launch gate decisions | Initiated at PRD Approved stage; completed before development begins |
+| [T-22 DECODE Translation Worksheet](templates/T-22-decode-translation-worksheet.md) | Guided session worksheet for the 90-minute Draft PRD session; walks PM and eval engineer through Steps D, E, and C together | Print or open in a shared doc at the start of every Draft PRD session |
 
 ---
 
@@ -239,19 +239,19 @@ Where is your team today?
 
 | You are... | Start here |
 | --- | --- |
-| New to multimodal AI evaluation | [`MultiModal AI Evaluations 101`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) |
-| Building an evaluation program from scratch | [`Multimodal AI Evaluations Getting Started Guide`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) |
-| Implementing a full evaluation program | [`Multimodal AI Evaluations Field Manual`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) |
-| Translating PRDs and feature requests into eval specs | [`Multimodal AI Evals Speak`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/guides/multimodal-ai-evals-speak.md) — the DECODE framework |
-| Running a PRD authoring session with eval requirements | [`T-22 DECODE Translation Worksheet`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-22-decode-translation-worksheet.md) |
-| Embedding eval requirements into a PRD right now | [`T-19 Eval Stub Template`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-19-eval-stub-template.md) |
-| Writing a full eval specification for a feature | [`T-21 Multimodal Eval Specification Template`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-21-multimodal-eval-spec-template.md) |
-| Looking for a specific infrastructure template | [`/templates`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates) directory |
-| Responding to a production alert right now | [`T-13 Driver Analysis`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-13-driver-analysis-template.md) |
-| Making a ship/hold decision | [`T-14 Decision Memo`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-14-decision-memo.md) |
-| Running a quarterly program review | [`T-18 Evaluation Debt Register`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/templates/T-18-evaluation-debt-register.md) |
-| Evaluating a specific platform | [`/implementations`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/implementations) directory |
-| Reading evaluation reports | [`/reports`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/reports) directory |
+| New to multimodal AI evaluation | [`MultiModal AI Evaluations 101`](guides/Multimodal%20AI%20Product%20Evaluation%20%E2%80%94%20101%20Guide%20-%20Enhanced.pdf) |
+| Building an evaluation program from scratch | [`Multimodal AI Evaluations Getting Started Guide`](guides/Multimodal%20AI%20Product%20Evaluation%20-%20Getting%20Started.pdf) |
+| Implementing a full evaluation program | [`Multimodal AI Evaluations Field Manual`](guides/Multimodal%20AI%20Product%20Evaluation%20-%20The%20Practioner's%20Field%20Manual%20-%20v2.1.pdf) |
+| Translating PRDs and feature requests into eval specs | [`Multimodal AI Evals Speak`](guides/multimodal-ai-evals-speak.md) — the DECODE framework |
+| Running a PRD authoring session with eval requirements | [`T-22 DECODE Translation Worksheet`](templates/T-22-decode-translation-worksheet.md) |
+| Embedding eval requirements into a PRD right now | [`T-19 Eval Stub Template`](templates/T-19-eval-stub-template.md) |
+| Writing a full eval specification for a feature | [`T-21 Multimodal Eval Specification Template`](templates/T-21-multimodal-eval-spec-template.md) |
+| Looking for a specific infrastructure template | [`/templates`](templates) directory |
+| Responding to a production alert right now | [`T-13 Driver Analysis`](templates/T-13-driver-analysis-template.md) |
+| Making a ship/hold decision | [`T-14 Decision Memo`](templates/T-14-decision-memo.md) |
+| Running a quarterly program review | [`T-18 Evaluation Debt Register`](templates/T-18-evaluation-debt-register.md) |
+| Evaluating a specific platform | [`/implementations`](implementations) directory |
+| Reading evaluation reports | [`/reports`](reports) directory |
 
 ---
 
@@ -307,14 +307,13 @@ If you use this framework in your work:
 
 ```
 (2026). Multimodal AI Evaluations: A Practitioner's Framework.
-GitHub: https://github.com/abhixz13/Multimodal-AI-Evaluations
 ```
 
 ---
 
 ## Contributing
 
-Contributions welcome. See [`CONTRIBUTING.md`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/CONTRIBUTING.md) for guidelines.
+Contributions welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines.
 
 Priority areas: product evaluation reports · platform implementation notebooks · translations
 
@@ -322,7 +321,7 @@ Priority areas: product evaluation reports · platform implementation notebooks 
 
 ## License
 
-MIT License — see [`LICENSE`](https://github.com/abhixz13/Multimodal-AI-Evaluations/blob/main/LICENSE) for details.
+MIT License — see [`LICENSE`](LICENSE) for details.
 Free to use, adapt, and build upon with attribution.
 
 ---
